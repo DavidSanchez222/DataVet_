@@ -20,6 +20,6 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('register', 'Auth\RegisterController@register');
 
 Route::get('/', 'AdminController@index')->name('admin');
-Route::get('users', 'AdminController@users_index')->name('users');
+Route::get('users', 'UsersController@index')->name('users');
 
 
