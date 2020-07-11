@@ -10,15 +10,20 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $table = 'usuarios';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'nombre', 'email', 'password', 'apellido', 'telefono_celular', 'numero_identificacion', 'type_documents_id', 'nickname'
+        'name',
+        'email',
+        'lastname',
+        'nickname',
+        'number_id',
+        'password',
+        'phone',
+        'document_type_id',
     ];
 
     /**
@@ -37,5 +42,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'document_type_id' => 'integer',
     ];
+
+    public function document_type()
+    {
+        return $this->belongsTo(DocumentType::class);
+    }
 }
