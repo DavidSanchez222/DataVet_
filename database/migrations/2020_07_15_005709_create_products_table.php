@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id()->comment('Identificador del producto dentro de la tabla de productos.');
             $table->string('name')->comment('Nombre del producto.');
-            $table->string('barcode')->comment('Codigo del empaque del producto.');
+            $table->string('barcode')->unique()->comment('Codigo del empaque del producto.');
             $table->text('description')->comment('Descripcion del producto.');
             $table->integer('price')->comment('Precio unitario del producto.');
             $table->double('iva')->comment('Impuesto.');
