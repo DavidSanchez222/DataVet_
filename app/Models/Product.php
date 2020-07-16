@@ -10,4 +10,14 @@ class Product extends Model
     {
         return $this->belongsTo(Categorie::class);
     }
+
+    public function checkouts()
+    {
+        return $this->hasMany(Checkout::class);
+    }
+
+    public function entryLogs()
+    {
+        return $this->hasMany(EntryLog::class);
+    }
 }
