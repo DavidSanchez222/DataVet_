@@ -20,6 +20,13 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('register', 'Auth\RegisterController@register');
 
 Route::get('/', 'AdminController@index')->name('admin');
-Route::get('users', 'UsersController@index')->name('users');
+Route::get('/products', 'ProductsController@index')->name('admin.products');
+Route::get('/entry_logs', 'EntryLogsController@index')->name('admin.entry_logs');
+Route::get('/checkouts', 'CheckoutsController@index')->name('admin.checkouts');
+Route::get('/settings', 'AdminController@settings')->name('admin.settings');
+Route::get('/settings/users', 'UsersController@index')->name('settings.users');
+Route::get('/settings/roles', 'RolesController@index')->name('settings.roles');
+Route::get('/settings/categories', 'CategoriesController@index')->name('settings.categories');
+Route::get('/settings/document_types', 'DocumentTypesController@index')->name('settings.document_types');
 
 

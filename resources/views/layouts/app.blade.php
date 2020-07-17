@@ -17,6 +17,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">

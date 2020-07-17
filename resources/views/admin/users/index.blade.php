@@ -9,9 +9,10 @@
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table text-center">
+        <table class="table text-center table-sm">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th colspan="2">Documento</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
@@ -21,32 +22,34 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user)
+                @foreach ($users as $key => $user)
                     <tr>
-                        <td>{{$user->document_type->abbreviation}}</td>
-                        <td>{{$user->number_id}}</td>
-                        <td>{{$user->name}}</td>
-                        <td>{{$user->lastname}}</td>
-                        <td>{{$user->email}}</td>
-                        <td>{{$user->phone}}</td>
+                        <th>{{ $key + 1 }}</th>
+                        <td>{{ $user->document_type->abbreviation }}</td>
+                        <td>{{ $user->number_id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->lastname }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
                         <td>
                             <form action="" method="post">
                                 @method('PUT')
                                 @csrf
-                                <button class="btn btn-sm btn-primary">Actualizar</button>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
                             </form>
                         </td>
                         <td>
                             <form action="" method="post">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        {{ $users->links() }}
     </div>
     @include('admin.users.modals')
 @endsection

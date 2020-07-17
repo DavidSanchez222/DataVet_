@@ -54,17 +54,18 @@
             </div>
         </nav>
     </header>
-    <menu class="menu">
+    <menu class="menu border-right border-success bg-success">
         <div class="card">
-            <img src="" alt="logo" class="img-fluid">
+            <img src="{{ asset('images/logo.svg') }}" alt="logo" class="img-fluid text-success">
         </div>
-        <ul class="list-group">
-            <a class="list-group-item list-group-item-action" href="{{ route('admin') }}">Inicio</a>
-            <a class="list-group-item list-group-item-action" href="">Usuarios</a>
-            <a class="list-group-item list-group-item-action" href="">Productos</a>
-            <a class="list-group-item list-group-item-action" href="">Inventario</a>
-            <a class="list-group-item list-group-item-action" href="">Entradas</a>
-            <a class="list-group-item list-group-item-action" href="{{ route('users') }}">Configuraciones</a>
+        <ul class="list-group rounded-0">
+            {{-- {{ Request::path() }} --}}
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == '/' ? 'active' : '' }}" href="{{ route('admin') }}">Inicio</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'products' ? 'active' : '' }}" href="{{ route('admin.products') }}">Productos</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'entry_logs' ? 'active' : '' }}" href="{{ route('admin.entry_logs') }}">Entradas</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'checkouts' ? 'active' : '' }}" href="{{ route('admin.checkouts') }}">Salidas</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == '' ? 'active' : '' }}" href="">Inventario</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">Configuraciones</a>
         </ul>
     </menu>
     <main class="main">
