@@ -54,9 +54,9 @@
             </div>
         </nav>
     </header>
-    <menu class="menu border-right border-success bg-success">
-        <div class="card">
-            <img src="{{ asset('images/logo.svg') }}" alt="logo" class="img-fluid text-success">
+    <menu class="menu border-right border-success">
+        <div class="card border-success rounded-0">
+            <img src="{{ asset('images/logo.png') }}" alt="logo" class="img-fluid text-success">
         </div>
         <ul class="list-group rounded-0">
             {{-- {{ Request::path() }} --}}
@@ -65,10 +65,11 @@
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'entry_logs' ? 'active' : '' }}" href="{{ route('admin.entry_logs') }}">Entradas</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'checkouts' ? 'active' : '' }}" href="{{ route('admin.checkouts') }}">Salidas</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == '' ? 'active' : '' }}" href="">Inventario</a>
-            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">Configuraciones</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ strpos(Request::path(), 'settings') !== false ? 'active' : '' }}" href="{{ route('admin.settings') }}">Configuraciones</a>
         </ul>
     </menu>
     <main class="main">
+        @include('flash-message')
         @yield('admin-content')
     </main>
     <footer class="footer bg-success text-white">
