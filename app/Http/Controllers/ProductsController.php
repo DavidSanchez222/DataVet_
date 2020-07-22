@@ -33,4 +33,26 @@ class ProductsController extends Controller
 
         return back()->with('success', 'Producto creado exitosamente!');
     }
+
+    public function update($id, Request $request)
+    {
+        $product = Product::find($id);
+
+        $product->name = $request->name;
+        $product->barcode = $request->barcode;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->iva = $request->iva;
+        $product->categorie_id = $request->categorie;
+        $product->save();
+
+        return back()->with('success', 'Producto actualizado exitosamente!');
+    }
+
+    public function delete($id)
+    {
+        Product::destroy($id);
+
+        return back()->with('success', 'Producto eliminado exitosamente!');
+    }
 }

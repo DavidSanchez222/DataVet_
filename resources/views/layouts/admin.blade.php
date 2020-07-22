@@ -64,7 +64,7 @@
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'products' ? 'active' : '' }}" href="{{ route('admin.products') }}">Productos</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'entry_logs' ? 'active' : '' }}" href="{{ route('admin.entry_logs') }}">Entradas</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'checkouts' ? 'active' : '' }}" href="{{ route('admin.checkouts') }}">Salidas</a>
-            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == '' ? 'active' : '' }}" href="">Inventario</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'stocktaking' ? 'active' : '' }}" href="{{ route('admin.stocktaking') }}">Inventario</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ strpos(Request::path(), 'settings') !== false ? 'active' : '' }}" href="{{ route('admin.settings') }}">Configuraciones</a>
         </ul>
     </menu>
