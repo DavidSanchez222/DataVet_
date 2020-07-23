@@ -30,6 +30,10 @@ Route::delete('/products/delete/{id}', 'ProductsController@delete')->name('admin
 
 // *Urls Entradas de Productos
 Route::get('/entry_logs', 'EntryLogsController@index')->name('admin.entry_logs');
+Route::get('/entry_logs/show', 'EntryLogsController@show')->name('admin.entry_logs.show');
+Route::post('/entry_logs/add', 'EntryLogsController@store')->name('admin.entry_logs.add');
+Route::put('/entry_logs/update/{id}', 'EntryLogsController@update')->name('admin.entry_logs.update');
+Route::delete('/entry_logs/delete/{id}', 'EntryLogsController@delete')->name('admin.entry_logs.delete');
 
 // *Urls Salidas de Productos
 Route::get('/checkouts', 'CheckoutsController@index')->name('admin.checkouts');

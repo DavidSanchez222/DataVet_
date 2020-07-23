@@ -56,7 +56,8 @@
                                 title="Ver"
                             >
                                 <i class="fas fa-eye"></i>
-                            </button></td>
+                            </button>
+                        </td>
                         <td>
                             <form action="{{ route('admin.products.delete', $product->id) }}"
                                 method="post"
