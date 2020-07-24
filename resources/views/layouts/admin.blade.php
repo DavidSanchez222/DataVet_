@@ -55,7 +55,7 @@
         </nav>
     </header>
     <menu class="menu border-right border-success">
-        <div class="card border-success rounded-0">
+        <div class="card border-success rounded-circle bg-white m-3">
             <img src="{{ asset('images/logo.svg') }}" alt="logo" class="img-fluid text-success">
         </div>
         <ul class="list-group rounded-0">
