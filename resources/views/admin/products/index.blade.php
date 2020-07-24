@@ -19,7 +19,7 @@
                     <th>IVA</th>
                     <th>Categoria</th>
                     <th>Creado</th>
-                    <th colspan="2">Acciones</th>
+                    <th colspan="3">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,10 +38,24 @@
                                 class="btn btn-sm btn-primary"
                                 data-toggle="modal"
                                 data-target="#editProductModal"
+                                title="Editar"
                                 data-product='@json($product)'
                                 onclick="editProduct('{{ $product->id }}', '{{ route('admin.products.update', $product->id) }}')"
                             >
                                 <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button
+                                id="{{ 'showProduct' . $product->id }}"
+                                class="btn btn-sm btn-primary"
+                                data-target="#showProductModal"
+                                data-toggle="modal"
+                                data-product='@json($product)'
+                                onclick="showProduct('{{ $product->id }}')"
+                                title="Ver"
+                            >
+                                <i class="fas fa-eye"></i>
                             </button>
                         </td>
                         <td>
@@ -54,6 +68,7 @@
                                 <button
                                     type="button"
                                     class="btn btn-sm btn-danger"
+                                    title="Eliminar"
                                     onclick="confirmDeletion('deleteProduct', '{{ $product->id }}')"
                                 >
                                     <i class="fas fa-trash"></i>
@@ -81,6 +96,20 @@
             $('#price').val(product.price);
             $('#iva').val(product.iva);
             $('#description').val(product.description);
+        }
+
+        function showProduct(id) {
+            let product = document.querySelector('#showProduct' + id).dataset.product;
+            product = JSON.parse(product);
+            console.log(product);
+            $('#showProductModalTitle').text(product.name);
+            $('#showBarcode').text(product.barcode);
+            $('#showCategorie').text(product.categorie.name);
+            $('#showPrice').text(product.price);
+            $('#showIva').text(product.iva);
+            $('#showUpdatedAt').text(product.updated_at.split('.')[0].replace('T', ' '));
+            $('#showCreatedAt').text(product.created_at.split('.')[0].replace('T', ' '));
+            $('#showDescription').text(product.description);
         }
 
         function confirmDeletion(model, id) {
