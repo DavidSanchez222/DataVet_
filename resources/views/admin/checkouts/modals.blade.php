@@ -1,21 +1,21 @@
 <div
     class="modal fade"
-    id="editEntryLogModal"
+    id="editCheckoutModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="editEntryLogModalTitle"
+    aria-labelledby="editCheckoutModalTitle"
     aria-hidden="true"
     data-backdrop="static"
 >
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="editEntryLogModalTitle">Editar Entrada</h5>
+                <h5 class="modal-title" id="editCheckoutModalTitle">Editar Salida</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="post" id="editEntryLog">
+            <form method="post" id="editCheckout">
                 @method('put')
                 @csrf
                 <div class="modal-body">
@@ -40,7 +40,7 @@
                             <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1">
                         </div>
                         <div class="col-sm-6 pr-0">
-                            <label for="provider">Proveedor:</label>
+                            <label for="product">Proveedor:</label>
                             <select name="provider" class="form-control" id="provider">
                                 <option value="0" disabled>Proveedor</option>
                                 @foreach ($providers as $providers)
@@ -61,17 +61,17 @@
 </div>
 <div
     class="modal fade"
-    id="showEntryLogModal"
+    id="showCheckoutModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="showEntryLogModalTitle"
+    aria-labelledby="showCheckoutModalTitle"
     aria-hidden="true"
     data-backdrop="static"
 >
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="showEntryLogModalTitle">Ver Entrada</h5>
+                <h5 class="modal-title" id="showCheckoutModalTitle">Ver Salida</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
