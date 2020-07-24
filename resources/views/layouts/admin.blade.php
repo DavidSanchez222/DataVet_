@@ -56,7 +56,7 @@
     </header>
     <menu class="menu border-right border-success">
         <div class="card border-success rounded-0">
-            <img src="{{ asset('images/logo.png') }}" alt="logo" class="img-fluid text-success">
+            <img src="{{ asset('images/logo.svg') }}" alt="logo" class="img-fluid text-success">
         </div>
         <ul class="list-group rounded-0">
             {{-- {{ Request::path() }} --}}
