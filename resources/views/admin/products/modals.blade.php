@@ -97,9 +97,66 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-sm btn-success">Crear</button>
+                    <button type="submit" class="btn btn-sm btn-success">Actualizar</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+<div
+    class="modal fade"
+    id="showProductModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="showProductModalTitle"
+    aria-hidden="true"
+    data-backdrop="static"
+>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="showProductModalTitle">Ver Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-hover table-sm">
+                    <tbody>
+                        <tr>
+                            <th>Codigo de barras:</th>
+                            <td id="showBarcode"></td>
+                        </tr>
+                        <tr>
+                            <th>Categoria:</th>
+                            <td id="showCategorie"></td>
+                        </tr>
+                        <tr>
+                            <th>Precio:</th>
+                            <td id="showPrice"></td>
+                        </tr>
+                        <tr>
+                            <th>IVA:</th>
+                            <td id="showIva"></td>
+                        </tr>
+                        <tr>
+                            <th>Ultima actualización:</th>
+                            <td id="showUpdatedAt"></td>
+                        </tr>
+                        <tr>
+                            <th>Creado:</th>
+                            <td id="showCreatedAt"></td>
+                        </tr>
+                        <tr>
+                            <th>Descripcion:</th>
+                            <td id="showDescription"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
         </div>
     </div>
 </div>

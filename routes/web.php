@@ -21,14 +21,27 @@ Route::post('register', 'Auth\RegisterController@register');
 
 Route::get('/', 'AdminController@index')->name('admin');
 
-// Url Productos
+// *Url Productos
 Route::get('/products', 'ProductsController@index')->name('admin.products');
+Route::get('/products/show', 'ProductsController@show')->name('admin.products.show');
 Route::post('/products/add', 'ProductsController@store')->name('admin.products.add');
 Route::put('/products/update/{id}', 'ProductsController@update')->name('admin.products.update');
 Route::delete('/products/delete/{id}', 'ProductsController@delete')->name('admin.products.delete');
 
+// *Urls Entradas de Productos
 Route::get('/entry_logs', 'EntryLogsController@index')->name('admin.entry_logs');
+Route::get('/entry_logs/show', 'EntryLogsController@show')->name('admin.entry_logs.show');
+Route::post('/entry_logs/add', 'EntryLogsController@store')->name('admin.entry_logs.add');
+Route::put('/entry_logs/update/{id}', 'EntryLogsController@update')->name('admin.entry_logs.update');
+Route::delete('/entry_logs/delete/{id}', 'EntryLogsController@delete')->name('admin.entry_logs.delete');
+
+// *Urls Salidas de Productos
 Route::get('/checkouts', 'CheckoutsController@index')->name('admin.checkouts');
+
+// *Urls Inventario
+Route::get('/stocktaking', 'AdminController@stocktaking')->name('admin.stocktaking');
+
+// *Urls Configuraciones
 Route::get('/settings', 'AdminController@settings')->name('admin.settings');
 Route::get('/settings/users', 'UsersController@index')->name('settings.users');
 Route::get('/settings/roles', 'RolesController@index')->name('settings.roles');
