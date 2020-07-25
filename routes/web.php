@@ -19,6 +19,10 @@ Auth::routes(['register' => false]);
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
+// *Ruta del homepage
+Route::get('/home', 'HomeController@index')->name('home');
+
+// *Rurta principal de la administracion
 Route::get('/', 'AdminController@index')->name('admin');
 
 // *Url Productos
@@ -37,6 +41,10 @@ Route::delete('/entry_logs/delete/{id}', 'EntryLogsController@delete')->name('ad
 
 // *Urls Salidas de Productos
 Route::get('/checkouts', 'CheckoutsController@index')->name('admin.checkouts');
+Route::get('/checkouts/show', 'CheckoutsController@show')->name('admin.checkouts.show');
+Route::post('/checkouts/add', 'CheckoutsController@store')->name('admin.checkouts.add');
+Route::put('/checkouts/update/{id}', 'CheckoutsController@update')->name('admin.checkouts.update');
+Route::delete('/checkouts/delete/{id}', 'CheckoutsController@delete')->name('admin.checkouts.delete');
 
 // *Urls Inventario
 Route::get('/stocktaking', 'AdminController@stocktaking')->name('admin.stocktaking');

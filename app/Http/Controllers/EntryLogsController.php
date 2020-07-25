@@ -22,7 +22,7 @@ class EntryLogsController extends Controller
     {
         EntryLog::destroy($id);
 
-        return back()->with('success', 'Producto eliminado exitosamente!');
+        return back()->with('success', 'Entrada eliminada exitosamente!');
     }
 
     public function update($id, Request $request)
