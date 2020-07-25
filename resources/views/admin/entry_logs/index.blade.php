@@ -98,10 +98,11 @@
         function showEntryLog(id) {
             let entry_log = document.querySelector('#showEntryLog' + id).dataset.entry_log;
             entry_log = JSON.parse(entry_log);
-            $('#showPurchase_order').text(entry_log.purchase_order);
+            $('#showPurchaseOrder').text(entry_log.purchase_order);
             $('#showProduct').text(entry_log.product.name);
             $('#showQuantity').text(entry_log.quantity);
             $('#showProvider').text(entry_log.provider.name);
+            $('#showUser').text(entry_log.user.name);
             $('#showUpdatedAt').text(entry_log.updated_at.split('.')[0].replace('T', ' '));
             $('#showCreatedAt').text(entry_log.created_at.split('.')[0].replace('T', ' '));
         }

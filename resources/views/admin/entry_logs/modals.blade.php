@@ -81,7 +81,7 @@
                     <tbody>
                         <tr>
                             <th>Orden de compra:</th>
-                            <td id="showPurchase_order"></td>
+                            <td id="showPurchaseOrder"></td>
                         </tr>
                         <tr>
                             <th>Producto:</th>
@@ -94,6 +94,10 @@
                         <tr>
                             <th>Proveedor:</th>
                             <td id="showProvider"></td>
+                        </tr>
+                        <tr>
+                            <th>Registrado por:</th>
+                            <td id="showUser"></td>
                         </tr>
                         <tr>
                             <th>Ultima actualización:</th>

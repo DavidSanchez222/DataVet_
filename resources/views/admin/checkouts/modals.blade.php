@@ -21,8 +21,8 @@
                 <div class="modal-body">
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-6 pl-0">
-                            <label for="purchase_order">Orden de Compra:</label>
-                            <input type="text" name="purchase_order" class="form-control" placeholder="Orden de Compra" id="purchase_order">
+                            <label for="invoice_number">Factura:</label>
+                            <input type="text" name="invoice_number" class="form-control" placeholder="Factura" id="invoice_number">
                         </div>
                         <div class="col-sm-6 pr-0">
                             <label for="product">Producto:</label>
@@ -38,15 +38,6 @@
                         <div class="col-sm-6 pl-0">
                             <label for="quantity">Cantidad:</label>
                             <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1">
-                        </div>
-                        <div class="col-sm-6 pr-0">
-                            <label for="product">Proveedor:</label>
-                            <select name="provider" class="form-control" id="provider">
-                                <option value="0" disabled>Proveedor</option>
-                                @foreach ($providers as $providers)
-                                    <option value="{{ $providers->id }}">{{ $providers->name }}</option>
-                                @endforeach
-                            </select>
                         </div>
                     </div>
                 </div>
@@ -80,8 +71,8 @@
                 <table class="table table-striped table-hover table-sm">
                     <tbody>
                         <tr>
-                            <th>Orden de compra:</th>
-                            <td id="showPurchase_order"></td>
+                            <th>Factura:</th>
+                            <td id="showInvoiceNumber"></td>
                         </tr>
                         <tr>
                             <th>Producto:</th>
@@ -92,8 +83,8 @@
                             <td id="showQuantity"></td>
                         </tr>
                         <tr>
-                            <th>Proveedor:</th>
-                            <td id="showProvider"></td>
+                            <th>Registrado por:</th>
+                            <td id="showUser"></td>
                         </tr>
                         <tr>
                             <th>Ultima actualización:</th>
