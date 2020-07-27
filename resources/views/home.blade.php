@@ -8,7 +8,9 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Dat@_Vet Software</a>
+            <!--<a class="navbar-brand js-scroll-trigger" href="#page-top">Dat@_Vet Software</a>-->
+            <a class="nav-brand js-scroll-triger" href="#page-top"></a>
+            <img src="../images/home/logo_vertical_claro.svg" width="420" height="60" alt="">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
@@ -99,8 +101,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(5).jpg">
-                        <img class="img-fluid" src="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(5).jpg" alt="" />
+                    <a class="portfolio-box" href="images/home/Data Vet(5).jpg">
+                        <img class="img-fluid" src="images/home/Data Vet(5).jpg" alt="" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -108,8 +110,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(4).jpg">
-                        <img class="img-fluid" src="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(4).jpg" alt="" />
+                    <a class="portfolio-box" href="images/home/Data Vet(4).jpg">
+                        <img class="img-fluid" src="images/home/Data Vet(4).jpg" alt="" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -117,8 +119,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(5).jpg">
-                        <img class="img-fluid" src="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(5).jpg" alt="" />
+                    <a class="portfolio-box" href="images/home//Data Vet(5).jpg">
+                        <img class="img-fluid" src="images/home//Data Vet(5).jpg" alt="" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -126,8 +128,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(6).jpg">
-                        <img class="img-fluid" src="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(6).jpg" alt="" />
+                    <a class="portfolio-box" href="images/home/Data Vet(6).jpg">
+                        <img class="img-fluid" src="images/home/Data Vet(6).jpg" alt="" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -135,8 +137,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(3).jpg">
-                        <img class="img-fluid" src="/opt/lampp/htdocs/Landing_Datavet/dist/assets/img/Data Vet(3).jpg" alt="" />
+                    <a class="portfolio-box" href="images/home/Data Vet(3).jpg">
+                        <img class="img-fluid" src="images/home/Data Vet(3).jpg" alt="" />
                         <div class="portfolio-box-caption p-3">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
