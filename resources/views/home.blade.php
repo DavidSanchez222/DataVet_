@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 font-weight-light mb-5">Administre usted mismo todos sus inventarios, exixtencias de productos citas facturacion e historia clinica.</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">En un solo Software</a>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="http://localhost:8000/">En un solo Software</a>
                 </div>
             </div>
         </div>
