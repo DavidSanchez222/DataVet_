@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\DocumentType;
+use App\Models\{DocumentType, Role, User};
 use App\Providers\RouteServiceProvider;
-use App\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
@@ -41,7 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**
@@ -60,7 +59,8 @@ class RegisterController extends Controller
             'number_id' => ['required', 'string', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'min:7'],
-            'type_documents_id' => ['required', 'exists:type_documents,id'],
+            'document_type' => ['required', 'exists:document_types,id'],
+            'role' => ['required', 'exists:roles,id'],
         ]);
     }
 
@@ -80,24 +80,26 @@ class RegisterController extends Controller
             'number_id' => $data['number_id'],
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
-            'type_documents_id' => $data['type_documents_id'],
+            'document_type_id' => $data['document_type'],
         ]);
     }
 
     public function showRegistrationForm()
     {
-        $type_documents = DocumentType::all();
+        $document_types = DocumentType::orderBy('abbreviation', 'ASC')->get();
+        $roles = Role::orderBy('name', 'ASC')->get();
 
-        return view('auth.register',compact('type_documents'));
+        return view('auth.register',compact('document_types', 'roles'));
     }
 
-    // public function register(Request $request)
-    // {
-    //     $this->validator($request->all())->validate();
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
-    //     event(new Registered($user = $this->create($request->all())));
+        event(new Registered($user = $this->create($request->all())));
 
-    //     return $this->registered($request, $user)
-    //         ?: redirect($this->redirectPath());
-    // }
+        // return $this->registered($request, $user)?: redirect($this->redirectPath());
+
+        return redirect()->route('settings.users.index')->with('success', 'Usuario creado exitosamente!');
+    }
 }

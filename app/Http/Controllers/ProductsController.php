@@ -10,10 +10,11 @@ class ProductsController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::paginate(20);
+        $products = Product::category($request->categorie)->name($request->name)->barcode($request->barcode)->paginate(20);
         $categories = Categorie::all();
 
-        if(isset($request->message)){
+        if(isset($request->message))
+        {
             $message = $request->message;
         }
 
@@ -49,7 +50,7 @@ class ProductsController extends Controller
         return back()->with('success', 'Producto actualizado exitosamente!');
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         Product::destroy($id);
 
