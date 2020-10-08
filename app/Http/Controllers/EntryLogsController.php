@@ -24,17 +24,15 @@ class EntryLogsController extends Controller
         return view('admin.entry_logs.index', compact('entry_logs', 'products', 'providers'));
     }
 
-    public function destroy($id)
+    public function destroy(EntryLog $entry_log)
     {
-        EntryLog::destroy($id);
+        $entry_log->delete();
 
         return back()->with('success', 'Entrada eliminada exitosamente!');
     }
 
-    public function update($id, Request $request)
+    public function update(EntryLog $entry_log, Request $request)
     {
-        $entry_log = EntryLog::find($id);
-
         $entry_log->purchase_order = $request->purchase_order;
         $entry_log->product_id = $request->product;
         $entry_log->quantity = $request->quantity;

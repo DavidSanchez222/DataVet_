@@ -17,11 +17,6 @@
         </div>
         <div class="col-sm-3">
             <div class="form-group">
-                <input type="text" name="product_barcode" placeholder="Codigo de producto" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
                 <input type="text" name="purchase_order" placeholder="Orden de compra" class="form-control form-control-sm">
             </div>
         </div>

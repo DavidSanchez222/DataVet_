@@ -13,11 +13,6 @@ class ProductsController extends Controller
         $products = Product::category($request->categorie)->name($request->name)->barcode($request->barcode)->paginate(20);
         $categories = Categorie::all();
 
-        if(isset($request->message))
-        {
-            $message = $request->message;
-        }
-
         return view('admin.products.index', compact('products', 'categories'));
     }
 
