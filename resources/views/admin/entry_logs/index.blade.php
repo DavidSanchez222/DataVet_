@@ -1,12 +1,50 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
+    <div class="row justify-content-between align-items-center m-2">
         <h2 class="mb-0">Entradas</h2>
         <div>
-            <button class="btn btn-sm btn-primary">Filtrar</button>
+            <a class="btn btn-sm btn-primary" href="{{ route('admin.entry_logs.index') }}">Todos</a>
+            <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
         </div>
     </div>
+    <form class="row m-2 bg-light filter collapse">
+        <hr class="w-100">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="product" placeholder="Nombre de producto" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="product_barcode" placeholder="Codigo de producto" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="purchase_order" placeholder="Orden de compra" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="provider" placeholder="Proveedor" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="user" placeholder="Registrado por" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="date" name="created_at" placeholder="Fecha Registro" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
+        </div>
+        <hr class="w-100">
+    </form>
     <div class="table-responsive">
         <table class="table text-center table-sm">
             <thead>
@@ -34,7 +72,7 @@
                         <td>
                             <button
                                 id="{{ 'editEntryLog' . $entry_log->id }}"
-                                class="btn btn-sm btn-primary"
+                                class="btn btn-sm btn-warning"
                                 data-toggle="modal"
                                 data-target="#editEntryLogModal"
                                 title="Editar"
@@ -59,7 +97,7 @@
                         </td>
                         <td>
                             <form
-                                action="{{ route('admin.entry_logs.delete', $entry_log->id) }}" method="post"
+                                action="{{ route('admin.entry_logs.destroy', $entry_log->id) }}" method="post"
                                 id="{{ 'deleteEntryLog' . $entry_log->id }}"
                             >
                                 @method('DELETE')

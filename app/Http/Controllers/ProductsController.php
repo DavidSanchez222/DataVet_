@@ -35,10 +35,8 @@ class ProductsController extends Controller
         return back()->with('success', 'Producto creado exitosamente!');
     }
 
-    public function update($id, Request $request)
+    public function update(Product $product, Request $request)
     {
-        $product = Product::find($id);
-
         $product->name = $request->name;
         $product->barcode = $request->barcode;
         $product->description = $request->description;
@@ -50,10 +48,15 @@ class ProductsController extends Controller
         return back()->with('success', 'Producto actualizado exitosamente!');
     }
 
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        Product::destroy($id);
+        $product->checkouts()->delete();
+        $product->entryLogs()->delete();
+        $product->delete();
 
         return back()->with('success', 'Producto eliminado exitosamente!');
     }
+    // O380e2AaqsFm
+
+    // Los instructores deberían estar a la vanguardia tecnológica de hoy en día, y no solo quedarse con lo que aprendieron alguna vez, esto con el fin de, aparte de enseñar lo básico, también aumentar la competitividad del aprendiz frente al mercado tecnológico tanto tradicional como actual y futuro.
 }
