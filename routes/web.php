@@ -23,21 +23,22 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::get('/home', 'HomeController@index')->name('home');
 
 // *Rurta principal de la administracion
-Route::get('/', 'AdminController@index')->name('admin');
 
 Route::middleware('auth')->group(function(){
     Route::prefix('admin')->name('admin.')->group(function(){
+        // *Home del administrador
+        Route::get('/', 'AdminController@index');
         // *Url Productos
         Route::resource('products', 'ProductsController');
         // *Urls Entradas de Productos
         Route::resource('entry_logs', 'EntryLogsController');
         // *Urls Salidas de Productos
         Route::resource('checkouts', 'CheckoutsController');
+        // *Urls Inventario
+        Route::get('/stocktaking', 'AdminController@stocktaking')->name('stocktaking');
     });
 });
 
-// *Urls Inventario
-Route::get('/stocktaking', 'AdminController@stocktaking')->name('admin.stocktaking');
 
 // *Urls Configuraciones
 Route::get('/settings', 'AdminController@settings')->name('admin.settings');

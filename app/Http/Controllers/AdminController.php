@@ -41,12 +41,12 @@ class AdminController extends Controller
         return view('admin.settings', compact('configuration_items'));
     }
 
-    public function stocktaking()
+    public function stocktaking(Request $request)
     {
         $entryLogs = [];
         $checkouts = [];
 
-        $products = Product::paginate(20);
+        $products = Product::name($request->name)->paginate(20);
 
         foreach ($products as $key => $product) {
             $total_entrylogs = 0;
