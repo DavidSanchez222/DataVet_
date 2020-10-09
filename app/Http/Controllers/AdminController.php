@@ -33,7 +33,7 @@ class AdminController extends Controller
 
     public function settings()
     {
-        $configuration_items[]= ['name' => 'Usuarios', 'quantity' => User::count(), 'url' => route('settings.users')];
+        $configuration_items[]= ['name' => 'Usuarios', 'quantity' => User::count(), 'url' => route('settings.users.index')];
         $configuration_items[]= ['name' => 'Roles', 'quantity' => Role::count(), 'url' => route('settings.roles')];
         $configuration_items[]= ['name' => 'Tipos de Documento', 'quantity' => DocumentType::count(), 'url' => route('settings.document_types')];
         $configuration_items[]= ['name' => 'Categorias', 'quantity' => Categorie::count(), 'url' => route('settings.categories')];
@@ -41,12 +41,12 @@ class AdminController extends Controller
         return view('admin.settings', compact('configuration_items'));
     }
 
-    public function stocktaking()
+    public function stocktaking(Request $request)
     {
         $entryLogs = [];
         $checkouts = [];
 
-        $products = Product::paginate(20);
+        $products = Product::name($request->name)->paginate(20);
 
         foreach ($products as $key => $product) {
             $total_entrylogs = 0;

@@ -1,13 +1,41 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
+    <div class="row justify-content-between align-items-center m-2">
         <h2 class="mb-0">Productos</h2>
         <div>
+            <a href="{{ route('admin.products.index') }}" class="btn btn-sm btn-primary">Todos</a>
             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createProductModal">Crear</button>
-            <button class="btn btn-sm btn-primary">Filtrar</button>
+            <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
         </div>
     </div>
+    <form class="row m-2 bg-light filter collapse">
+        <hr class="col-sm-12">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Nombre" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" name="barcode" placeholder="Codigo" class="form-control form-control-sm">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <select name="categorie" class="form-control form-control-sm">
+                    <option value="0" selected disabled>Categoria</option>
+                    @foreach ($categories as $categorie)
+                        <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
+        </div>
+        <hr class="col-sm-12">
+    </form>
     <div class="table-responsive">
         <table class="table text-center table-sm">
             <thead>
@@ -35,7 +63,7 @@
                         <td>
                             <button
                                 id="{{ 'editProduct' . $product->id }}"
-                                class="btn btn-sm btn-primary"
+                                class="btn btn-sm btn-warning"
                                 data-toggle="modal"
                                 data-target="#editProductModal"
                                 title="Editar"
@@ -59,7 +87,7 @@
                             </button>
                         </td>
                         <td>
-                            <form action="{{ route('admin.products.delete', $product->id) }}"
+                            <form action="{{ route('admin.products.destroy', $product->id) }}"
                                 method="post"
                                 id="{{ 'deleteProduct' . $product->id }}"
                             >
@@ -114,7 +142,7 @@
 
         function confirmDeletion(model, id) {
             if(confirm('¿Estás seguro de eliminar este registro?')) {
-               $('#' + model + id).submit();
+                $('#' + model + id).submit();
             }
         }
     </script>

@@ -13,6 +13,7 @@
     <script src="{{ asset('jquery/jquery-3.5.1.min.js') }}" defer></script>
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('js/app.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

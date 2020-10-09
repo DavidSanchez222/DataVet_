@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ route('admin.products.add') }}" method="post">
+            <form action="{{ route('admin.products.store') }}" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class="col-sm-12 d-flex justify-content-between my-2">

@@ -9,26 +9,30 @@ use Illuminate\Http\Request;
 
 class EntryLogsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $entry_logs = EntryLog::paginate(20);
+        $entry_logs = EntryLog::purchase_order($request->purchase_order)
+            ->products($request->product)
+            ->providers($request->provider)
+            ->users($request->user)
+            ->created_at($request->created_at)
+            ->paginate(20);
+
         $products = Product::all();
         $providers = Provider::all();
 
         return view('admin.entry_logs.index', compact('entry_logs', 'products', 'providers'));
     }
 
-    public function delete($id)
+    public function destroy(EntryLog $entry_log)
     {
-        EntryLog::destroy($id);
+        $entry_log->delete();
 
         return back()->with('success', 'Entrada eliminada exitosamente!');
     }
 
-    public function update($id, Request $request)
+    public function update(EntryLog $entry_log, Request $request)
     {
-        $entry_log = EntryLog::find($id);
-
         $entry_log->purchase_order = $request->purchase_order;
         $entry_log->product_id = $request->product;
         $entry_log->quantity = $request->quantity;
@@ -37,5 +41,15 @@ class EntryLogsController extends Controller
         $entry_log->save();
 
         return back()->with('success', 'Entrada actualizada exitosamente!');
+    }
+
+    public function create()
+    {
+
+    }
+
+    public function store()
+    {
+
     }
 }

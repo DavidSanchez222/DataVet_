@@ -4,7 +4,7 @@
     <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
         <h2 class="mb-0">Usuarios</h2>
         <div>
-            <button class="btn btn-sm btn-primary">Crear</button>
+            <a class="btn btn-sm btn-primary" href="{{ route('settings.users.create') }}">Crear</a>
             <button class="btn btn-sm btn-primary">Filtrar</button>
         </div>
     </div>
@@ -39,10 +39,12 @@
                             </form>
                         </td>
                         <td>
-                            <form action="" method="post">
+                            <form action="{{ route('settings.users.destroy', $user->id) }}" method="post" id="deleteUser{{ $user->id }}">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                <button type="button" class="btn btn-sm btn-danger" onclick="confirmDeletion('User', '{{ $user->id }}')">
+                                    <i class="fas fa-trash"></i>
+                                </button>
                             </form>
                         </td>
                     </tr>
@@ -54,10 +56,12 @@
     @include('admin.users.modals')
 @endsection
 
-@section('scripts')
+@section('scripts-bottom')
     <script>
-        $(document).ready(() => {
-            $('#staticBackdrop').modal('show');
-        });
+        function confirmDeletion(model, id) {
+            if(confirm('¿Estás seguro de eliminar este registro?')) {
+                $('#delete' + model + id).submit();
+            }
+        }
     </script>
 @endsection
