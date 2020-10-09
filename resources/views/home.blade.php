@@ -32,7 +32,7 @@
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Administre usted mismo todos sus inventarios, exixtencias de productos citas facturacion e historia clinica.</p>
+                    <p class="text-white-75 font-weight-light mb-5">Administre usted mismo todos sus inventarios, exixtencias de productos.</p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="http://localhost:8000/">En un solo Software</a>
                 </div>
             </div>
