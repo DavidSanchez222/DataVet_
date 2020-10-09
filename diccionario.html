@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://localhost/phpmyadmin/db_datadict.php?db=warehouse&goto=db_structure.php -->
+<html lang="es" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  
+  <link rel="icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="./diccionario_files/print.css">
+    <title>Vista de impresión - phpMyAdmin 5.0.2</title>
+    <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.min.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery-migrate.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/whitelist.php"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/sprintf.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/ajax.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/keyhandler.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery-ui.min.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/js.cookie.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.mousewheel.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.event.drag-2.2.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.validate.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery-ui-timepicker-addon.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.ba-hashchange-1.3.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/jquery.debounce-1.0.5.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/menu_resizer.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/cross_framing_protection.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/rte.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/tracekit.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/error_report.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/messages.php"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/config.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/doclinks.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/functions.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/navigation.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/indexes.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/common.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/page_settings.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/drag_drop_import.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/shortcuts_handler.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/codemirror.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/sql.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/runmode.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/show-hint.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/sql-hint.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/lint.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/sql-lint.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="./diccionario_files/console.js"></script>
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+<script data-cfasync="false" type="text/javascript">
+// <![CDATA[
+CommonParams.setAll({common_query:"",opendb_url:"db_structure.php",lang:"es",server:"1",table:"",db:"warehouse",token:"296b6769714249745e6c2343736f5c73",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Examinar",pma_text_left_default_tab:"Estructura",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.0.2",auth_type:"config",user:"root"});
+ConsoleEnterExecutes=false
+
+AJAX.scriptHandler
+  .add('vendor/jquery/jquery.min.js', 0)
+  .add('vendor/jquery/jquery-migrate.js', 0)
+  .add('whitelist.php', 1)
+  .add('vendor/sprintf.js', 1)
+  .add('ajax.js', 0)
+  .add('keyhandler.js', 1)
+  .add('vendor/bootstrap/bootstrap.bundle.min.js', 1)
+  .add('vendor/jquery/jquery-ui.min.js', 0)
+  .add('vendor/js.cookie.js', 1)
+  .add('vendor/jquery/jquery.mousewheel.js', 0)
+  .add('vendor/jquery/jquery.event.drag-2.2.js', 0)
+  .add('vendor/jquery/jquery.validate.js', 0)
+  .add('vendor/jquery/jquery-ui-timepicker-addon.js', 0)
+  .add('vendor/jquery/jquery.ba-hashchange-1.3.js', 0)
+  .add('vendor/jquery/jquery.debounce-1.0.5.js', 0)
+  .add('menu_resizer.js', 1)
+  .add('cross_framing_protection.js', 0)
+  .add('rte.js', 1)
+  .add('vendor/tracekit.js', 1)
+  .add('error_report.js', 1)
+  .add('messages.php', 0)
+  .add('config.js', 1)
+  .add('doclinks.js', 1)
+  .add('functions.js', 1)
+  .add('navigation.js', 1)
+  .add('indexes.js', 1)
+  .add('common.js', 1)
+  .add('page_settings.js', 1)
+  .add('drag_drop_import.js', 1)
+  .add('shortcuts_handler.js', 1)
+  .add('vendor/codemirror/lib/codemirror.js', 0)
+  .add('vendor/codemirror/mode/sql/sql.js', 0)
+  .add('vendor/codemirror/addon/runmode/runmode.js', 0)
+  .add('vendor/codemirror/addon/hint/show-hint.js', 0)
+  .add('vendor/codemirror/addon/hint/sql-hint.js', 0)
+  .add('vendor/codemirror/addon/lint/lint.js', 0)
+  .add('codemirror/addon/lint/sql-lint.js', 0)
+  .add('console.js', 1)
+;
+$(function() {
+        AJAX.fireOnload('whitelist.php');
+      AJAX.fireOnload('vendor/sprintf.js');
+        AJAX.fireOnload('keyhandler.js');
+      AJAX.fireOnload('vendor/bootstrap/bootstrap.bundle.min.js');
+        AJAX.fireOnload('vendor/js.cookie.js');
+                  AJAX.fireOnload('menu_resizer.js');
+        AJAX.fireOnload('rte.js');
+      AJAX.fireOnload('vendor/tracekit.js');
+      AJAX.fireOnload('error_report.js');
+        AJAX.fireOnload('config.js');
+      AJAX.fireOnload('doclinks.js');
+      AJAX.fireOnload('functions.js');
+      AJAX.fireOnload('navigation.js');
+      AJAX.fireOnload('indexes.js');
+      AJAX.fireOnload('common.js');
+      AJAX.fireOnload('page_settings.js');
+      AJAX.fireOnload('drag_drop_import.js');
+      AJAX.fireOnload('shortcuts_handler.js');
+                    AJAX.fireOnload('console.js');
+  });
+// ]]>
+</script>
+
+  <noscript><style>html{display:block}</style></noscript>
+</head>
+<body>
+  <body style="background-color:#4FA845;">
+  
+  
+  
+      <noscript>
+      <div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error"> ¡Pasado este punto, debe tener Javascript activado!</div>
+    </noscript>
+  
+  
+  
+
+  <div id="page_content">
+  
+    <div class="container" , mx-auto>
+      <div class="container p-3 my-3 bg-dark text-white">
+        <div class="row justify-content-center h-100">
+        </h1>
+          <div class="mx-auto"><h1>Warehouse Diccionario de Datos</h1></div>
+          
+        </h1>
+
+
+      </div>
+
+      
+
+      
+  
+  </div>
+  <div class="container" , mx-auto> 
+
+   
+   </div>
+<div>
+      <div><div class="container" , mx-auto> 
+        
+      <h2 align="center"> categories</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint   (20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador de la categoria en la tabla.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre de la categoria.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminada la categoria.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center"> Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">categories_name_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>name</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+      
+    </div>
+
+      <div>
+      <h2 align="center"> checkouts</h2>
+      
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              invoice_number
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Numero de factura de venta.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              product_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>products -&gt; id</td>categories
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              quantity
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              int(11)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Cantidad del producto que se vende en una factura</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              user_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>users -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">checkouts_invoice_number_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>invoice_number</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">checkouts_product_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>product_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">checkouts_user_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>user_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+      <h2 align="center"> checkouts</h2>
+    </div>
+      <div>
+        <h2 align="center">document_types</h2>
+      
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador del tipo de documento en la tabla.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              abbreviation
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Abreviación del tipo de documento.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre del tipo de documento.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminado el tipo de documento.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+        <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">document_types_abbreviation_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>abbreviation</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2>entry_logs</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador de la entrada en la tabla.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              purchase_order
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Numero de la orden de compra.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              product_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>products -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              quantity
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              int(11)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Cantidad del producto entrante</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              provider_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>providers -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              user_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>users -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">entry_logs_purchase_order_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>purchase_order</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">entry_logs_product_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>product_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">entry_logs_provider_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>provider_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">entry_logs_user_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>user_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2 align="center">failed_jobs</h2>
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              connection
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              text
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              queue
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              text
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              payload
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              longtext
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              exception
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              longtext
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              failed_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              current_timestamp()
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>0</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2>migrations</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              int(10)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              migration
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              batch
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              int(11)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>11</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2>password_resets</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              email
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              token
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">password_resets_email_index</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>email</td><td>0</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2>products</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador del producto dentro de la tabla de productos.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre del producto.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              barcode
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Codigo del empaque del producto.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              description
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              text
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Descripcion del producto.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              price
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              int(11)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Precio unitario del producto.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              iva
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              double
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Impuesto.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              categorie_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>categories -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminado el producto.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>9</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">products_barcode_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>barcode</td><td>9</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">products_categorie_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>categorie_id</td><td>9</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2>providers</h2>
+      
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador del proveedor en la tabla.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre del proveedor.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              rut_nit
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Codigo RUT o NIT</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              address
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Dirección del proveedor.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              phones
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Teléfonos del proveedor.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminado el proveedor.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">providers_name_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>name</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">providers_rut_nit_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>rut_nit</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2 align="center">roles</h2>
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador del rol en la tabla.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre del rol.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminado el tipo de documento.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">roles_name_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>name</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2 align="center">role_user</h2>
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              role_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>roles -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              user_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>users -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>0</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">role_user_role_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>role_id</td><td>0</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">role_user_user_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>user_id</td><td>0</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+      <div>
+      <h2 align="center">users</h2>
+      <table class="print">
+        <tbody><tr>
+          <th>Columna</th>
+          <th>Tipo</th>
+          <th>Nulo</th>
+          <th>Predeterminado</th>
+                      <th>Enlaces a</th>
+                    <th>Comentarios</th>
+                      <th>Media (MIME) type</th>
+                  </tr>
+                  <tr>
+            <td class="nowrap">
+              id
+                              <em>(Primaria)</em>
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Identificador del usuario en el la base de datos.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              nickname
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Apodo que aparecerá en la cuenta del usuario.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              name
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Nombre del usuario.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              lastname
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Apellidos del usuario.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              document_type_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              bigint(20)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td>document_types -&gt; id</td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              number_id
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Numero de identificación del usuario.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              phone
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Teléfono de contacto del usuario</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              email
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Correo electrónico del usuario.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              email_verified_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Fecha de verificación del correo electrónico.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              password
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(255)
+            </td>
+            <td>No</td>
+            <td class="nowrap">
+                              
+                          </td>
+                          <td></td>
+                        <td>Contraseña del usuario</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              remember_token
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              varchar(100)
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Clave del sistema para recordar sesiones abiertas.</td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              created_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              updated_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td></td>
+                          <td></td>
+                      </tr>
+                  <tr>
+            <td class="nowrap">
+              deleted_at
+                          </td>
+            <td lang="en" dir="ltr" class="nowrap">
+              timestamp
+            </td>
+            <td>Sí</td>
+            <td class="nowrap">
+                              <em>NULL</em>
+                          </td>
+                          <td></td>
+                        <td>Campo que indica la fecha en la que ha sido eliminada la cuenta del usuario.</td>
+                          <td></td>
+                      </tr>
+              </tbody></table>
+
+      <h2 align="center">Índices</h2><div class="no_indexes_defined hide"><div class="notice"><img src="./diccionario_files/dot.gif" title="" alt="" class="icon ic_s_notice"> ¡No se ha definido ningún índice!</div></div><div class="responsivetable jsresponsive"><table id="table_index"><thead><tr><th>Nombre de la clave</th><th>Tipo</th><th>Único</th><th>Empaquetado</th><th>Columna</th><th>Cardinalidad</th><th>Cotejamiento</th><th>Nulo</th><th>Comentario</th></tr></thead><tbody class="row_span"><tr class="noclick"><td rowspan="1">PRIMARY</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">users_number_id_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>number_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">users_email_unique</td><td rowspan="1">BTREE</td><td rowspan="1">Sí</td><td rowspan="1">No</td><td>email</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody><tbody class="row_span"><tr class="noclick"><td rowspan="1">users_document_type_id_foreign</td><td rowspan="1">BTREE</td><td rowspan="1">No</td><td rowspan="1">No</td><td>document_type_id</td><td>2</td><td>A</td><td>No</td><td rowspan="1"></td></tr></tbody></table></div>
+    </div>
+  </div>
+
+<p class="print_ignore">
+  <input type="button" class="btn btn-secondary button" id="print" value="Imprimir">
+</p>
+  </div>
+  <div id="selflink" class="print_ignore"><a href="http://localhost/phpmyadmin/db_datadict.php?db=warehouse&amp;table=&amp;server=1&amp;target=" title="Abrir nueva ventana de phpMyAdmin" target="_blank" rel="noopener noreferrer"><img src="./diccionario_files/dot.gif" title="Abrir nueva ventana de phpMyAdmin" alt="Abrir nueva ventana de phpMyAdmin" class="icon ic_window-new"></a></div>
+
+  <div class="clearfloat" id="pma_errors">
+    
+  </div>
+
+  
+<script data-cfasync="false" type="text/javascript">
+// <![CDATA[
+var debugSQLInfo = 'null';
+
+// ]]>
+</script>
+
+
+  
+  
+  
+
+</body></html>
