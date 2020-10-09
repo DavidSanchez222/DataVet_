@@ -108,9 +108,8 @@
             </div>
         </div>
         <div class="col-md-10 mt-5">
-            <button type="submit" class="btn btn-primary">
-                Crear
-            </button>
+            <a class="btn btn-sm btn-secondary"href="{{ url()->previous() }}">Atras</a>
+            <button type="submit" class="btn btn-sm btn-primary">Crear</button>
         </div>
     </form>
 </div>

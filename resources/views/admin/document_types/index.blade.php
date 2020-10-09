@@ -1,11 +1,13 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
-        <h2 class="mb-0">Tipos de Documento</h2>
-        <div>
-            <button class="btn btn-sm btn-primary">Crear</button>
-            <button class="btn btn-sm btn-primary">Filtrar</button>
+    <div class="sticky-top bg-white">
+        <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
+            <h2 class="mb-0">Tipos de Documento</h2>
+            <div>
+                <button class="btn btn-sm btn-primary">Crear</button>
+                <button class="btn btn-sm btn-primary">Filtrar</button>
+            </div>
         </div>
     </div>
     <div class="table-responsive">

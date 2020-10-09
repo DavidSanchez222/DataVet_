@@ -33,7 +33,7 @@ class AdminController extends Controller
 
     public function settings()
     {
-        $configuration_items[]= ['name' => 'Usuarios', 'quantity' => User::count(), 'url' => route('settings.users.index')];
+        $configuration_items[]= ['name' => 'Usuarios', 'quantity' => User::count(), 'url' => route('admin.settings.users.index')];
         $configuration_items[]= ['name' => 'Roles', 'quantity' => Role::count(), 'url' => route('settings.roles')];
         $configuration_items[]= ['name' => 'Tipos de Documento', 'quantity' => DocumentType::count(), 'url' => route('settings.document_types')];
         $configuration_items[]= ['name' => 'Categorias', 'quantity' => Categorie::count(), 'url' => route('settings.categories')];

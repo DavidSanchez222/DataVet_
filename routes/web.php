@@ -36,14 +36,17 @@ Route::middleware('auth')->group(function(){
         Route::resource('checkouts', 'CheckoutsController');
         // *Urls Inventario
         Route::get('/stocktaking', 'AdminController@stocktaking')->name('stocktaking');
+        // *Urls Configuraciones
+        Route::prefix('settings')->name('settings.')->group(function(){
+            Route::get('/', 'AdminController@settings')->name('index');
+            Route::resource('users', 'UserController');
+
+        });
     });
 });
 
 
-// *Urls Configuraciones
-Route::get('/settings', 'AdminController@settings')->name('admin.settings');
 Route::name('settings.')->group(function(){
-    Route::resource('settings/users', 'UserController');
 });
 Route::get('/settings/roles', 'RolesController@index')->name('settings.roles');
 Route::get('/settings/categories', 'CategoriesController@index')->name('settings.categories');

@@ -1,12 +1,49 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
-        <h2 class="mb-0">Usuarios</h2>
-        <div>
-            <a class="btn btn-sm btn-primary" href="{{ route('settings.users.create') }}">Crear</a>
-            <button class="btn btn-sm btn-primary">Filtrar</button>
+    <div class="sticky-top bg-white">
+        <div class="row justify-content-between align-items-center m-2">
+            <h2 class="mb-0">Usuarios</h2>
+            <div>
+                <a class="btn btn-sm btn-secondary"href="{{ route('admin.settings.index') }}">Atras</a>
+                <a class="btn btn-sm btn-primary" href="{{ route('admin.settings.users.create') }}">Crear</a>
+                <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
+            </div>
         </div>
+        <form class="row m-2 bg-light filter collapse">
+            <hr class="w-100">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <select name="type_document" class="form-control form-control-sm">
+                        <option value="0">Tipo de documento</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="document_number" class="form-control form-control-sm" placeholder="Número de documento">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nombre o apellido" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="email" class="form-control form-control-sm" placeholder="Email">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="number" name="phone" class="form-control form-control-sm" placeholder="Teléfono">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
+            </div>
+            <hr class="w-100">
+        </form>
     </div>
     <div class="table-responsive">
         <table class="table text-center table-sm">
@@ -39,7 +76,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="{{ route('settings.users.destroy', $user->id) }}" method="post" id="deleteUser{{ $user->id }}">
+                            <form action="{{ route('admin.settings.users.destroy', $user->id) }}" method="post" id="deleteUser{{ $user->id }}">
                                 @method('DELETE')
                                 @csrf
                                 <button type="button" class="btn btn-sm btn-danger" onclick="confirmDeletion('User', '{{ $user->id }}')">
@@ -51,7 +88,9 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $users->links() }}
+        <div class="row justify-content-center mx-2">
+            {{ $users->links() }}
+        </div>
     </div>
     @include('admin.users.modals')
 @endsection
