@@ -38,6 +38,7 @@ class DocumentTypesController extends Controller
     {
         try
         {
+            dd($document_type);
             $document_type->delete();
         }
         catch(QueryException $exception)

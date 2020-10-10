@@ -1,25 +1,19 @@
-<div class="modal fade" id="createDocumentTypeModal" tabindex="-1" role="dialog" aria-labelledby="createDocumentTypeModalTitle" aria-hidden="true" data-backdrop="static">
+<div class="modal fade" id="createCategorieModal" tabindex="-1" role="dialog" aria-labelledby="createCategorieModalTitle" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="createDocumentTypeModalTitle">Crear Tipo de Documento</h5>
+                <h5 class="modal-title" id="createCategorieModalTitle">Crear Categoria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ route('admin.settings.document_types.store') }}" method="post">
+            <form action="{{ route('admin.settings.categories.store') }}" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <input type="text" name="abbreviation" class="form-control" placeholder="Abreviación">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="description">Descripción</label>
-                                <textarea class="form-control" name="description" cols="30" rows="5"></textarea>
+                                <input type="text" name="name" class="form-control" placeholder="Nombre">
                             </div>
                         </div>
                     </div>
@@ -34,36 +28,30 @@
 </div>
 <div
     class="modal fade"
-    id="editDocumentTypeModal"
+    id="editCategorieModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="editDocumentTypeModalTitle"
+    aria-labelledby="editCategorieModalTitle"
     aria-hidden="true"
     data-backdrop="static"
 >
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="editDocumentTypeModalTitle">Editar Tipo de Documento</h5>
+                <h5 class="modal-title" id="editCategorieModalTitle">Editar Categoria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="post" id="editDocumentType">
+            <form method="post" id="editCategorie">
                 @method('PUT')
                 @csrf
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="name">Abreviación</label>
-                                <input type="text" name="abbreviation" id="abbreviation" class="form-control" placeholder="Abreviación">
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="description">Descripción</label>
-                                <textarea class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nombre">
                             </div>
                         </div>
                     </div>
@@ -78,17 +66,17 @@
 </div>
 <div
     class="modal fade"
-    id="showDocumentTypeModal"
+    id="showCategorieModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="showDocumentTypeModalTitle"
+    aria-labelledby="showCategorieModalTitle"
     aria-hidden="true"
     data-backdrop="static"
 >
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title" id="showDocumentTypeModalTitle">Ver Tipo de Documento</h5>
+                <h5 class="modal-title" id="showCategorieModalTitle">Ver Categoria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -97,12 +85,8 @@
                 <table class="table table-striped table-hover table-sm">
                     <tbody>
                         <tr>
-                            <th>Abreviación:</th>
-                            <td id="show_abbreviation"></td>
-                        </tr>
-                        <tr>
-                            <th>Descripción:</th>
-                            <td id="show_description"></td>
+                            <th>Nombre:</th>
+                            <td id="show_name"></td>
                         </tr>
                         <tr>
                             <th>Ultima actualización:</th>
