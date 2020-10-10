@@ -11,6 +11,6 @@ $factory->define(EntryLog::class, function (Faker $faker) {
         'product_id' => rand(1,3),
         'quantity' => $faker->randomDigit,
         'provider_id' => rand(1,3),
-        'user_id' => rand(1,3),
+        'user_id' => 1,
     ];
 });

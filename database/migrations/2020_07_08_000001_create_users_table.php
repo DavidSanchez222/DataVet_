@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('document_type_id')->constrained()->comment('Llave foránea de la tabla tipos de documentos(type_documents).');
             $table->string('number_id')->unique()->comment('Numero de identificación del usuario.');
             $table->string('phone')->comment('Teléfono de contacto del usuario');
+            $table->foreignId('role_id')->constrained()->comment('Llave foranea que hace referencia al id en la tabla de roles.v');
             $table->string('email')->unique()->comment('Correo electrónico del usuario.');
             $table->timestamp('email_verified_at')->nullable()->comment('Fecha de verificación del correo electrónico.');
             $table->string('password')->comment('Contraseña del usuario');

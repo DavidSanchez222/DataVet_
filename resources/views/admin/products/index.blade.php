@@ -1,41 +1,43 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="row justify-content-between align-items-center m-2">
-        <h2 class="mb-0">Productos</h2>
-        <div>
-            <a href="{{ route('admin.products.index') }}" class="btn btn-sm btn-primary">Todos</a>
-            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createProductModal">Crear</button>
-            <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
+    <div class="sticky-top bg-white">
+        <div class="row justify-content-between align-items-center m-2">
+            <h2 class="mb-0">Productos</h2>
+            <div>
+                <a href="{{ route('admin.products.index') }}" class="btn btn-sm btn-primary">Todos</a>
+                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createProductModal">Crear</button>
+                <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
+            </div>
         </div>
+        <form class="row m-2 bg-light filter collapse">
+            <hr class="col-sm-12">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nombre" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="barcode" placeholder="Codigo" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <select name="categorie" class="form-control form-control-sm">
+                        <option value="0" selected disabled>Categoria</option>
+                        @foreach ($categories as $categorie)
+                            <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
+            </div>
+            <hr class="col-sm-12">
+        </form>
     </div>
-    <form class="row m-2 bg-light filter collapse">
-        <hr class="col-sm-12">
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Nombre" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="text" name="barcode" placeholder="Codigo" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <select name="categorie" class="form-control form-control-sm">
-                    <option value="0" selected disabled>Categoria</option>
-                    @foreach ($categories as $categorie)
-                        <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
-        </div>
-        <hr class="col-sm-12">
-    </form>
     <div class="table-responsive">
         <table class="table text-center table-sm">
             <thead>
@@ -107,7 +109,9 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $products->links() }}
+        <div class="row justify-content-center mx-2">
+            {{ $products->links() }}
+        </div>
     </div>
     @include('admin.products.modals')
 @endsection

@@ -1,40 +1,42 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="row justify-content-between align-items-center m-2">
-        <h2 class="mb-0">Salidas</h2>
-        <div>
-            <a class="btn btn-sm btn-primary" href="{{ route('admin.checkouts.index') }}">Todos</a>
-            <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
+    <div class="sticky-top bg-white">
+        <div class="row justify-content-between align-items-center m-2">
+            <h2 class="mb-0">Salidas</h2>
+            <div>
+                <a class="btn btn-sm btn-primary" href="{{ route('admin.checkouts.index') }}">Todos</a>
+                <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
+            </div>
         </div>
+        <form class="row m-2 bg-light filter collapse">
+            <hr class="w-100">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="product" placeholder="Nombre de producto" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="invoice_number" placeholder="Factura" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="user" placeholder="Registrado por" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="date" name="created_at" placeholder="Fecha Registro" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
+            </div>
+            <hr class="w-100">
+        </form>
     </div>
-    <form class="row m-2 bg-light filter collapse">
-        <hr class="w-100">
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="text" name="product" placeholder="Nombre de producto" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="text" name="invoice_number" placeholder="Orden de compra" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="text" name="user" placeholder="Registrado por" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <input type="date" name="created_at" placeholder="Fecha Registro" class="form-control form-control-sm">
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <button type="submit" class="btn btn-sm btn-success">Filtrar</button>
-        </div>
-        <hr class="w-100">
-    </form>
     <div class="table-responsive">
         <table class="table text-center table-sm">
             <thead>
@@ -104,7 +106,9 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $checkouts->links() }}
+        <div class="row justify-content-center mx-2">
+            {{ $checkouts->links() }}
+        </div>
     </div>
     @include('admin.checkouts.modals')
 @endsection

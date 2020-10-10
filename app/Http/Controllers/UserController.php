@@ -12,11 +12,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(20);
+        $users = User::name($request->name)->email($request->email)->phone($request->phone)->documenttype($request->document_type)->number_id($request->number_id)->paginate(20);
+        $document_types = DocumentType::orderBy('abbreviation', 'ASC')->get();
+        $roles = Role::orderBy('name', 'ASC')->get();
 
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users', 'document_types', 'roles'));
     }
 
     /**
@@ -69,9 +71,30 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'nickname' => ['required', 'string', 'max:255'],
+            'number_id' => ['required', 'string', 'unique:users'],
+            'phone' => ['required', 'string', 'min:7'],
+            'document_type' => ['required', 'exists:document_types,id'],
+            'role' => ['required', 'exists:roles,id'],
+        ]);
+
+        $user->name = $request->name;
+        $user->lastname = $request->lastname;
+        $user->nickname = $request->nickname;
+        $user->document_type_id = $request->document_type_id;
+        $user->number_id = $request->number_id;
+        $user->phone = $request->phone;
+        $user->role_id = $request->role_id;
+        $user->email = $request->email;
+        $user->save();
+
+        return back()->with('success', 'Usuario actualizado exitosamente!');
     }
 
     /**
@@ -80,10 +103,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::find($id);
-
         if(!isset($user)) {
             $status = 'error';
             $message = 'Usuario no encontrado o no existe';

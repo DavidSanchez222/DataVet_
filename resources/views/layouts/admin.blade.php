@@ -33,13 +33,13 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name . ' ' . Auth::user()->lastname }} <span class="caret"></span>
+                                    <span class="caret">{{ Auth::user()->nickname }}</span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -65,15 +65,15 @@
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'admin/entry_logs' ? 'active' : '' }}" href="{{ route('admin.entry_logs.index') }}">Entradas</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'admin/checkouts' ? 'active' : '' }}" href="{{ route('admin.checkouts.index') }}">Salidas</a>
             <a class="list-group-item list-group-item-action list-group-item-success {{ Request::path() == 'admin/stocktaking' ? 'active' : '' }}" href="{{ route('admin.stocktaking') }}">Inventario</a>
-            <a class="list-group-item list-group-item-action list-group-item-success {{ strpos(Request::path(), 'settings') !== false ? 'active' : '' }}" href="{{ route('admin.settings') }}">Configuraciones</a>
+            <a class="list-group-item list-group-item-action list-group-item-success {{ strpos(Request::path(), 'settings') !== false ? 'active' : '' }}" href="{{ route('admin.settings.index') }}">Configuraciones</a>
         </ul>
     </menu>
     <main class="main">
         @include('flash-message')
         @yield('admin-content')
     </main>
-    <footer class="footer bg-success text-white">
-        Dat@Vet_ 2020
+    <footer class="footer bg-success text-white text-center">
+        Copyright © 2020 - Dat@_Vet
     </footer>
 </main>
 @endsection

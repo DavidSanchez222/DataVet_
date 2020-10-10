@@ -16,17 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false]);
 
+// *Urls Registro Nuevo Usuario
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-// *Ruta del homepage
-Route::get('/home', 'HomeController@index')->name('home');
-
-// *Rurta principal de la administracion
+// *Url Homepage
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->group(function(){
     Route::prefix('admin')->name('admin.')->group(function(){
-        // *Home del administrador
+        // *Rurta principal de la administracion
         Route::get('/', 'AdminController@index');
         // *Url Productos
         Route::resource('products', 'ProductsController');
@@ -34,18 +33,21 @@ Route::middleware('auth')->group(function(){
         Route::resource('entry_logs', 'EntryLogsController');
         // *Urls Salidas de Productos
         Route::resource('checkouts', 'CheckoutsController');
-        // *Urls Inventario
+        // *Url Inventario
         Route::get('/stocktaking', 'AdminController@stocktaking')->name('stocktaking');
+        // *Urls Configuraciones
+        Route::prefix('settings')->name('settings.')->group(function(){
+            // *Url de la vista principal de las configuraciones
+            Route::get('/', 'AdminController@settings')->name('index');
+            // *Urls Configuracion de Usuarios
+            Route::resource('users', 'UserController');
+            // *Urls Configuracion de Roles
+            Route::resource('roles', 'RolesController');
+            // *Urls Configuracion de Categorias
+            Route::resource('categories', 'CategoriesController');
+            // *Urls Configuracion de Tipos de Documento
+            Route::resource('document_types', 'DocumentTypesController');
+        });
     });
 });
-
-
-// *Urls Configuraciones
-Route::get('/settings', 'AdminController@settings')->name('admin.settings');
-Route::name('settings.')->group(function(){
-    Route::resource('settings/users', 'UserController');
-});
-Route::get('/settings/roles', 'RolesController@index')->name('settings.roles');
-Route::get('/settings/categories', 'CategoriesController@index')->name('settings.categories');
-Route::get('/settings/document_types', 'DocumentTypesController@index')->name('settings.document_types');
 
