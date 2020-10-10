@@ -19,7 +19,7 @@
                 @method('put')
                 @csrf
                 <div class="modal-body">
-                    <div class="row justify-content-between">
+                    <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="name">Nombres</label>
@@ -66,6 +66,16 @@
                                 <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="role_id">Rol</label>
+                                <select name="role_id" id="role_id" class="form-control">
+                                    @foreach ($roles as $role)
+                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -105,12 +115,20 @@
                             <td id="show_names"></td>
                         </tr>
                         <tr>
+                            <th>Nickname:</th>
+                            <td id="show_nickname"></td>
+                        </tr>
+                        <tr>
                             <th>Email:</th>
                             <td id="show_email"></td>
                         </tr>
                         <tr>
                             <th>Teléfono</th>
                             <td id="show_phone"></td>
+                        </tr>
+                        <tr>
+                            <th>Rol</th>
+                            <td id="show_role"></td>
                         </tr>
                         <tr>
                             <th>Ultima actualización:</th>

@@ -36,14 +36,13 @@ class DocumentTypesController extends Controller
 
     public function destroy(DocumentType $document_type)
     {
-        try
+        if (!$document_type->users->count())
         {
-            dd($document_type);
             $document_type->delete();
         }
-        catch(QueryException $exception)
+        else
         {
-            return back()->with('error', "El tipo de documento \"$document_type->abbreviation\" no es posible eliminarlo, ya que aún esta en uso.");
+            return back()->with('info', "El tipo de documento \"$document_type->abbreviation\" no es posible eliminarlo, ya que aún esta en uso.");
         }
 
         return back()->with('success', 'Tipo de documento eliminado exitosamente!');

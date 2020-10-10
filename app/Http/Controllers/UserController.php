@@ -16,8 +16,9 @@ class UserController extends Controller
     {
         $users = User::name($request->name)->email($request->email)->phone($request->phone)->documenttype($request->document_type)->number_id($request->number_id)->paginate(20);
         $document_types = DocumentType::orderBy('abbreviation', 'ASC')->get();
+        $roles = Role::orderBy('name', 'ASC')->get();
 
-        return view('admin.users.index', compact('users', 'document_types'));
+        return view('admin.users.index', compact('users', 'document_types', 'roles'));
     }
 
     /**
@@ -70,9 +71,19 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->name = $request->name;
+        $user->lastname = $request->lastname;
+        $user->nickname = $request->nickname;
+        $user->document_type_id = $request->document_type_id;
+        $user->number_id = $request->number_id;
+        $user->phone = $request->phone;
+        $user->role_id = $request->role_id;
+        $user->email = $request->email;
+        $user->save();
+
+        return back()->with('success', 'Usuario actualizado exitosamente!');
     }
 
     /**

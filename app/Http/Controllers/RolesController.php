@@ -33,7 +33,11 @@ class RolesController extends Controller
 
     public function destroy(Role $role)
     {
-        $role->delete();
+        if (!$role->users->count()) {
+            $role->delete();
+        }else {
+            return back()->with('info', "El rol \"$role->name\" no se puede eliminar, existen usuarios con este rol.");
+        }
 
         return back()->with('success', 'Rol eliminado exitosamente!');
     }

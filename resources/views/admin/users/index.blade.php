@@ -57,6 +57,7 @@
                     <th>Apellido</th>
                     <th>Email</th>
                     <th>Telefono</th>
+                    <th>Rol</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
@@ -70,6 +71,7 @@
                         <td>{{ $user->lastname }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->phone }}</td>
+                        <td>{{ $user->role->name }}</td>
                         <td>
                             <button
                                 id="{{ 'editUser' . $user->id }}"
@@ -137,6 +139,7 @@
             $('#number_id').val(user.number_id);
             $('#phone').val(user.phone);
             $('#email').val(user.email);
+            $('#role_id').val(user.role.id);
         }
 
         function showUser(id) {
@@ -145,7 +148,9 @@
             $('#show_document').text(user.document_type.abbreviation + ' ' + user.number_id);
             $('#show_names').text(user.name + ' ' + user.lastname);
             $('#show_email').text(user.email);
+            $('#show_nickname').text(user.nickname);
             $('#show_phone').text(user.phone);
+            $('#show_role').text(user.role.name);
             $('#show_UpdatedAt').text(user.updated_at.split('.')[0].replace('T', ' '));
             $('#show_CreatedAt').text(user.created_at.split('.')[0].replace('T', ' '));
         }

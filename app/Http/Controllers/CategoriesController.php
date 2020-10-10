@@ -43,20 +43,13 @@ class CategoriesController extends Controller
 
     public function destroy($id)
     {
-        try
-        {
-            $categorie = Categorie::find($id);
+        $categorie = Categorie::find($id);
 
-            if($categorie->exists)
-            {
-                $categorie->delete();
-            }
-            else
-            {
-                return back()->with('error', 'Categoria no encontrada.');
-            }
+        if(!$categorie->products->count())
+        {
+            $categorie->delete();
         }
-        catch (QueryException $exception)
+        else
         {
             return back()->with('info', "La categoria \"$categorie->name\" no se puede eliminar, hay productos en esta.");
         }

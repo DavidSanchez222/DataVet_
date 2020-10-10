@@ -26,6 +26,7 @@ class User extends Authenticatable
         'password',
         'phone',
         'document_type_id',
+        'role_id'
     ];
 
     /**
@@ -52,9 +53,9 @@ class User extends Authenticatable
         return $this->belongsTo(DocumentType::class);
     }
 
-    public function roles()
+    public function role()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsTo(Role::class);
     }
 
     public function scopeName($query, $name)
