@@ -146,7 +146,7 @@
 
         function confirmDeletion(model, id) {
             if(confirm('¿Estás seguro de eliminar este registro?')) {
-               $('#' + model + id).submit();
+                $('#' + model + id).submit();
             }
         }
     </script>

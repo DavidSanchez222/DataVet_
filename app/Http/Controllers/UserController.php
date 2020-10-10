@@ -12,11 +12,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(20);
+        $users = User::name($request->name)->email($request->email)->phone($request->phone)->documenttype($request->document_type)->number_id($request->number_id)->paginate(20);
+        $document_types = DocumentType::orderBy('abbreviation', 'ASC')->get();
 
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users', 'document_types'));
     }
 
     /**
@@ -80,10 +81,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::find($id);
-
         if(!isset($user)) {
             $status = 'error';
             $message = 'Usuario no encontrado o no existe';

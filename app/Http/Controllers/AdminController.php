@@ -34,9 +34,9 @@ class AdminController extends Controller
     public function settings()
     {
         $configuration_items[]= ['name' => 'Usuarios', 'quantity' => User::count(), 'url' => route('admin.settings.users.index')];
-        $configuration_items[]= ['name' => 'Roles', 'quantity' => Role::count(), 'url' => route('settings.roles')];
-        $configuration_items[]= ['name' => 'Tipos de Documento', 'quantity' => DocumentType::count(), 'url' => route('settings.document_types')];
-        $configuration_items[]= ['name' => 'Categorias', 'quantity' => Categorie::count(), 'url' => route('settings.categories')];
+        $configuration_items[]= ['name' => 'Roles', 'quantity' => Role::count(), 'url' => route('admin.settings.roles.index')];
+        $configuration_items[]= ['name' => 'Tipos de Documento', 'quantity' => DocumentType::count(), 'url' => route('admin.settings.document_types.index')];
+        $configuration_items[]= ['name' => 'Categorias', 'quantity' => Categorie::count(), 'url' => route('admin.settings.categories.index')];
 
         return view('admin.settings', compact('configuration_items'));
     }
@@ -48,7 +48,7 @@ class AdminController extends Controller
 
         $products = Product::name($request->name)->paginate(20);
 
-        foreach ($products as $key => $product) {
+        foreach ($products as $product) {
             $total_entrylogs = 0;
             $total_checkouts = 0;
             foreach ($product->entryLogs as $entryLog) {

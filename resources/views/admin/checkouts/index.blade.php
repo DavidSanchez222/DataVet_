@@ -18,7 +18,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <input type="text" name="invoice_number" placeholder="Orden de compra" class="form-control form-control-sm">
+                    <input type="text" name="invoice_number" placeholder="Factura" class="form-control form-control-sm">
                 </div>
             </div>
             <div class="col-sm-3">

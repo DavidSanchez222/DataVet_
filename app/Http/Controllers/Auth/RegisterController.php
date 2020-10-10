@@ -100,6 +100,6 @@ class RegisterController extends Controller
 
         // return $this->registered($request, $user)?: redirect($this->redirectPath());
 
-        return redirect()->route('settings.users.index')->with('success', 'Usuario creado exitosamente!');
+        return redirect()->route('admin.settings.users.index')->with('success', 'Usuario creado exitosamente!');
     }
 }

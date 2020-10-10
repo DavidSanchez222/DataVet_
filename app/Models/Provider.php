@@ -10,4 +10,11 @@ class Provider extends Model
     {
         return $this->hasMany(EntryLog::class);
     }
+
+    public function scopeName($query, $name)
+    {
+        if ($name) {
+            return $query->where('name', 'LIKE', "%$name%");
+        }
+    }
 }

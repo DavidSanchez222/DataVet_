@@ -63,4 +63,32 @@ class User extends Authenticatable
             return $query->where('name', 'LIKE', "%$name%")->orWhere('lastname', 'LIKE', "%$name%");
         }
     }
+
+    public function scopeEmail($query, $email)
+    {
+        if ($email) {
+            return $query->where('email', 'LIKE', "%$email%");
+        }
+    }
+
+    public function scopePhone($query, $phone)
+    {
+        if ($phone) {
+            return $query->where('phone', 'LIKE', "%$phone%");
+        }
+    }
+
+    public function scopeDocumentType($query, $document_type)
+    {
+        if ($document_type) {
+            return $query->where('document_type_id', $document_type);
+        }
+    }
+
+    public function scopeNumber_id($query, $number_id)
+    {
+        if ($number_id) {
+            return $query->where('number_id', 'LIKE', "%$number_id%");
+        }
+    }
 }
