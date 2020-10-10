@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 font-weight-light mb-5">Administre usted mismo todos sus inventarios, exixtencias de productos.</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="http://localhost:8000/">En un solo Software</a>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ route('admin.') }}">En un solo Software</a>
                 </div>
             </div>
         </div>
@@ -184,8 +184,9 @@
         <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Dat@_Vet</div></div>
     </footer>
     <!-- Core theme JS-->
-    <section class="page-section bg-primary" id="presentacion">
+    <section class="page-section bg-primary text-center" id="presentacion">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjbrcO79eTz-ucqCovj-8jBMBiCYX6mZTk0Azp83Lw6AV2TYUGHRcpDPsF7G7FgQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQVQN-Ht2YdeX41oK6ZlG5pJ5bvJFBO8fPuhwo2ekxnM_fQEF_w2xGe9CEexeZp8EFf7TqXBSFdUQxG/pub?embedded=true" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </section>
 @endsection
 
@@ -197,10 +198,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-
-    <section class="page-section bg-primary" id="presentacion">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjbrcO79eTz-ucqCovj-8jBMBiCYX6mZTk0Azp83Lw6AV2TYUGHRcpDPsF7G7FgQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQVQN-Ht2YdeX41oK6ZlG5pJ5bvJFBO8fPuhwo2ekxnM_fQEF_w2xGe9CEexeZp8EFf7TqXBSFdUQxG/pub?embedded=true" align="center" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </section>
 @endsection
