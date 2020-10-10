@@ -18,7 +18,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">SERVICIOS</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PORTAFOLIO</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#presentacion">PRESENTACION</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#presentacion">DOCUMENTACIÓN</a></li>
                 </ul>
             </div>
         </div>
@@ -194,5 +194,6 @@
 
     <section class="page-section bg-primary" id="presentacion">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjbrcO79eTz-ucqCovj-8jBMBiCYX6mZTk0Azp83Lw6AV2TYUGHRcpDPsF7G7FgQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQVQN-Ht2YdeX41oK6ZlG5pJ5bvJFBO8fPuhwo2ekxnM_fQEF_w2xGe9CEexeZp8EFf7TqXBSFdUQxG/pub?embedded=true" align="center" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </section>
 @endsection
