@@ -10,4 +10,12 @@ class Role extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function scopeName($query, $name)
+    {
+        if ($name) {
+            return $query->where('name', 'LIKE', "%$name%");
+        }
+    }
+
 }

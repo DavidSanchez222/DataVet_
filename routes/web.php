@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false]);
 
+// *Urls Registro Nuevo Usuario
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-// *Ruta del homepage
+// *Url Homepage
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->group(function(){
@@ -32,7 +33,7 @@ Route::middleware('auth')->group(function(){
         Route::resource('entry_logs', 'EntryLogsController');
         // *Urls Salidas de Productos
         Route::resource('checkouts', 'CheckoutsController');
-        // *Urls Inventario
+        // *Url Inventario
         Route::get('/stocktaking', 'AdminController@stocktaking')->name('stocktaking');
         // *Urls Configuraciones
         Route::prefix('settings')->name('settings.')->group(function(){

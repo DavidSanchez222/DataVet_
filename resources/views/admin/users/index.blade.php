@@ -6,6 +6,7 @@
         <div>
             <a class="btn btn-sm btn-secondary"href="{{ route('admin.settings.index') }}">Atras</a>
             <a class="btn btn-sm btn-primary" href="{{ route('admin.settings.users.create') }}">Crear</a>
+            <a href="{{ route('admin.settings.users.index') }}" class="btn btn-sm btn-primary">Todo</a>
             <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
         </div>
     </div>
