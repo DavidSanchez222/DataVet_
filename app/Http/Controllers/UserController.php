@@ -73,6 +73,17 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'nickname' => ['required', 'string', 'max:255'],
+            'number_id' => ['required', 'string', 'unique:users'],
+            'phone' => ['required', 'string', 'min:7'],
+            'document_type' => ['required', 'exists:document_types,id'],
+            'role' => ['required', 'exists:roles,id'],
+        ]);
+
         $user->name = $request->name;
         $user->lastname = $request->lastname;
         $user->nickname = $request->nickname;

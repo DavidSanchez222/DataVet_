@@ -72,8 +72,8 @@
         @include('flash-message')
         @yield('admin-content')
     </main>
-    <footer class="footer bg-success text-white">
-        Dat@Vet_ 2020
+    <footer class="footer bg-success text-white text-center">
+        Copyright © 2020 - Dat@_Vet
     </footer>
 </main>
 @endsection
