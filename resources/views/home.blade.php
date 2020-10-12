@@ -102,8 +102,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="images/home/Data Vet(5).jpg">
-                        <img class="img-fluid" src="images/home/Data Vet(5).jpg" alt="" />
+                    <a class="portfolio-box" href="{{ asset('images/home/Data Vet(5).jpg')}}">
+                        <img class="img-fluid" src="{{ asset('images/home/Data Vet(5).jpg')}}">
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -111,8 +111,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="images/home/Data Vet(4).jpg">
-                        <img class="img-fluid" src="images/home/Data Vet(4).jpg" alt="" />
+                    <a class="portfolio-box" href="{{ asset('images/home/Data Vet(4).jpg')}}">
+                        <img class="img-fluid" src="{{ asset('images/home/Data Vet(4).jpg')}}">
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -120,8 +120,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="images/home//Data Vet(5).jpg">
-                        <img class="img-fluid" src="images/home//Data Vet(5).jpg" alt="" />
+                    <a class="portfolio-box" href="{{ asset('images/home/Data Vet(5).jpg')}}">
+                        <img class="img-fluid" src="{{ asset('images/home/Data Vet(5).jpg')}}">
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -129,8 +129,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="images/home/Data Vet(6).jpg">
-                        <img class="img-fluid" src="images/home/Data Vet(6).jpg" alt="" />
+                    <a class="portfolio-box" href="{{ asset('images/home/Data Vet(6).jpg')}}">
+                        <img class="img-fluid" src="{{ asset('images/home/Data Vet(6).jpg')}}">
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -138,8 +138,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="images/home/Data Vet(3).jpg">
-                        <img class="img-fluid" src="images/home/Data Vet(3).jpg" alt="" />
+                    <a class="portfolio-box" href="{{ asset('images/home/Data Vet(3).jpg')}}">
+                        <img class="img-fluid" src="{{ asset('images/home/Data Vet(3).jpg')}}">
                         <div class="portfolio-box-caption p-3">
                             <div class="project-category text-white-50">Category</div>
                             <div class="project-name">Project Name</div>
@@ -153,7 +153,7 @@
     <section class="page-section bg-dark text-white">
         <div class="container text-center">
             <h2 class="mb-4">Descargalo Aca!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Descarga</a>
+            <a class="btn btn-light btn-xl" href="http://datavet-warehouse.herokuapp.com/">Descarga</a>
         </div>
     </section>
     <!-- Contact-->
@@ -198,4 +198,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- Core theme JS-->
+<script src="{{ asset('js/scripts.js') }}"></script>
+
 @endsection
