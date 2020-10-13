@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Rol">
+                                <input type="text" name="name" class="form-control" placeholder="Rol" required>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="name">Rol</label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Rol">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Rol" required>
                             </div>
                         </div>
                     </div>

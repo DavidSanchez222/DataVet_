@@ -23,25 +23,25 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="name">Nombres</label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Nombres">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nombres" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="lastname">Apellidos</label>
-                                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Apellidos">
+                                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Apellidos" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="nickname">Nickname</label>
-                                <input type="text" name="nickname" id="nickname" class="form-control" placeholder="Nickname">
+                                <input type="text" name="nickname" id="nickname" class="form-control" placeholder="Nickname" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="document_type_id">Tipo Documento</label>
-                                <select name="document_type_id" id="document_type_id" class="form-control">
+                                <select name="document_type_id" id="document_type_id" class="form-control" required>
                                     @foreach ($document_types as $document_type)
                                         <option value="{{ $document_type->id }}">{{ "$document_type->abbreviation - $document_type->name" }}</option>
                                     @endforeach
@@ -51,25 +51,25 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="number_id">Número Documento</label>
-                                <input type="number" name="number_id" id="number_id" class="form-control" placeholder="Número Documento">
+                                <input type="number" name="number_id" id="number_id" class="form-control" placeholder="Número Documento" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
+                                <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="role_id">Rol</label>
-                                <select name="role_id" id="role_id" class="form-control">
+                                <select name="role_id" id="role_id" class="form-control" required>
                                     @foreach ($roles as $role)
                                         <option value="{{ $role->id }}">{{ $role->name }}</option>
                                     @endforeach

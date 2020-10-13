@@ -22,12 +22,11 @@
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-6 pl-0">
                             <label for="purchase_order">Orden de Compra:</label>
-                            <input type="text" name="purchase_order" class="form-control" placeholder="Orden de Compra" id="purchase_order">
+                            <input type="text" name="purchase_order" class="form-control" placeholder="Orden de Compra" id="purchase_order" required>
                         </div>
                         <div class="col-sm-6 pr-0">
                             <label for="product">Producto:</label>
-                            <select name="product" class="form-control" id="product">
-                                <option value="0" disabled>Producto</option>
+                            <select name="product" class="form-control" id="product" required>
                                 @foreach ($products as $product)
                                     <option value="{{ $product->id }}">{{ $product->name }}</option>
                                 @endforeach
@@ -37,12 +36,11 @@
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-6 pl-0">
                             <label for="quantity">Cantidad:</label>
-                            <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1">
+                            <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1" required>
                         </div>
                         <div class="col-sm-6 pr-0">
                             <label for="provider">Proveedor:</label>
-                            <select name="provider" class="form-control" id="provider">
-                                <option value="0" disabled>Proveedor</option>
+                            <select name="provider" class="form-control" id="provider" required>
                                 @foreach ($providers as $providers)
                                     <option value="{{ $providers->id }}">{{ $providers->name }}</option>
                                 @endforeach
