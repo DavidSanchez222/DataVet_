@@ -12,10 +12,10 @@
                 <div class="modal-body">
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-8 pl-0">
-                            <input type="text" name="name" class="form-control" placeholder="Nombre del producto">
+                            <input type="text" name="name" class="form-control" placeholder="Nombre del producto" required>
                         </div>
                         <div class="col-sm-4 pr-0">
-                            <select name="categorie" class="form-control">
+                            <select name="categorie" class="form-control" required>
                                 <option value="0" disabled selected>Categoria</option>
                                 @foreach ($categories as $categorie)
                                     <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
@@ -25,17 +25,17 @@
                     </div>
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="form-group">
-                            <input type="text" name="barcode" class="form-control" placeholder="Código de barras">
+                            <input type="text" name="barcode" class="form-control" placeholder="Código de barras" required>
                         </div>
                         <div class="form-group">
-                            <input type="number" name="price" class="form-control" placeholder="Precio">
+                            <input type="number" name="price" class="form-control" placeholder="Precio" required>
                         </div>
                         <div class="form-group">
-                            <input type="number" name="iva" class="form-control" placeholder="IVA">
+                            <input type="number" name="iva" class="form-control" placeholder="IVA" required>
                         </div>
                     </div>
                     <div class="col-sm-12 my-2">
-                        <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+                        <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Descripción" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -69,11 +69,10 @@
                 <div class="modal-body">
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-8 pl-0">
-                            <input type="text" name="name" class="form-control" placeholder="Nombre del producto" id="name">
+                            <input type="text" name="name" class="form-control" placeholder="Nombre del producto" id="name" required>
                         </div>
                         <div class="col-sm-4 pr-0">
-                            <select name="categorie" class="form-control" id="categorie">
-                                <option value="0" disabled>Categoria</option>
+                            <select name="categorie" class="form-control" id="categorie" required>
                                 @foreach ($categories as $categorie)
                                     <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
                                 @endforeach
@@ -82,17 +81,17 @@
                     </div>
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="form-group">
-                            <input type="text" name="barcode" class="form-control" placeholder="Código de barras" id="barcode">
+                            <input type="text" name="barcode" class="form-control" placeholder="Código de barras" id="barcode" required>
                         </div>
                         <div class="form-group">
-                            <input type="number" name="price" class="form-control" placeholder="Precio" id="price">
+                            <input type="number" name="price" class="form-control" placeholder="Precio" id="price" required>
                         </div>
                         <div class="form-group">
-                            <input type="number" name="iva" class="form-control" placeholder="IVA" id="iva">
+                            <input type="number" name="iva" class="form-control" placeholder="IVA" id="iva" required>
                         </div>
                     </div>
                     <div class="col-sm-12 my-2">
-                        <textarea name="description" class="form-control" cols="30" rows="5" id="description"></textarea>
+                        <textarea name="description" class="form-control" cols="30" rows="5" id="description" placeholder="Descripción" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

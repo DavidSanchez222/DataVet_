@@ -22,12 +22,11 @@
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-6 pl-0">
                             <label for="invoice_number">Factura:</label>
-                            <input type="text" name="invoice_number" class="form-control" placeholder="Factura" id="invoice_number">
+                            <input type="text" name="invoice_number" class="form-control" placeholder="Factura" id="invoice_number" required>
                         </div>
                         <div class="col-sm-6 pr-0">
                             <label for="product">Producto:</label>
-                            <select name="product" class="form-control" id="product">
-                                <option value="0" disabled>Producto</option>
+                            <select name="product" class="form-control" id="product" required>
                                 @foreach ($products as $product)
                                     <option value="{{ $product->id }}">{{ $product->name }}</option>
                                 @endforeach
@@ -37,7 +36,7 @@
                     <div class="col-sm-12 d-flex justify-content-between my-2">
                         <div class="col-sm-6 pl-0">
                             <label for="quantity">Cantidad:</label>
-                            <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1">
+                            <input type="number" name="quantity" class="form-control" placeholder="Cantidad" id="quantity" min="1" required>
                         </div>
                     </div>
                 </div>

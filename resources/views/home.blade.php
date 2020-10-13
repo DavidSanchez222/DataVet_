@@ -153,7 +153,7 @@
     <section class="page-section bg-dark text-white">
         <div class="container text-center">
             <h2 class="mb-4">Descargalo Aca!</h2>
-            <a class="btn btn-light btn-xl" href="http://datavet-warehouse.herokuapp.com/">Descarga</a>
+            <a class="btn btn-light btn-xl" href="{{ route('home') }}">Descarga</a>
         </div>
     </section>
     <!-- Contact-->
@@ -186,7 +186,7 @@
     <!-- Core theme JS-->
     <section class="page-section bg-primary text-center" id="presentacion">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjbrcO79eTz-ucqCovj-8jBMBiCYX6mZTk0Azp83Lw6AV2TYUGHRcpDPsF7G7FgQ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQVQN-Ht2YdeX41oK6ZlG5pJ5bvJFBO8fPuhwo2ekxnM_fQEF_w2xGe9CEexeZp8EFf7TqXBSFdUQxG/pub?embedded=true" frameborder="0" width="1350" height="516" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTyBjccB7_byB22lrbhEAc29o2I0cJqZlc4icG4h1jExgZKSq0Mg5IfQtT1Q3s36so7xTSj9oJ9FV5k/pub?embedded=true" width="800" height="786"></iframe>
     </section>
 @endsection
 

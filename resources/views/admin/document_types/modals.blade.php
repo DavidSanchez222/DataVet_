@@ -13,13 +13,13 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <input type="text" name="abbreviation" class="form-control" placeholder="Abreviación">
+                                <input type="text" name="abbreviation" class="form-control" placeholder="Abreviación" required>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="description">Descripción</label>
-                                <textarea class="form-control" name="description" cols="30" rows="5"></textarea>
+                                <textarea class="form-control" name="description" cols="30" rows="5"  required></textarea>
                             </div>
                         </div>
                     </div>
@@ -57,13 +57,13 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="name">Abreviación</label>
-                                <input type="text" name="abbreviation" id="abbreviation" class="form-control" placeholder="Abreviación">
+                                <input type="text" name="abbreviation" id="abbreviation" class="form-control" placeholder="Abreviación" required>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="description">Descripción</label>
-                                <textarea class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
+                                <textarea class="form-control" name="description" id="description" cols="30" rows="5"  required></textarea>
                             </div>
                         </div>
                     </div>

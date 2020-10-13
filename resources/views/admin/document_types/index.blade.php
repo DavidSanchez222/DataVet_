@@ -1,15 +1,13 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="sticky-top bg-white">
-        <div class="col-sm-12 d-flex justify-content-between align-items-center my-2">
-            <h2 class="mb-0">Tipos de Documento</h2>
-            <div>
-                <a href="{{ route('admin.settings.index') }}" class="btn btn-sm btn-secondary">Atras</a>
-                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createDocumentTypeModal">Crear</button>
-                <a href="{{ route('admin.settings.document_types.index') }}" class="btn btn-sm btn-primary">Todo</a>
-                <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
-            </div>
+    <div class="row justify-content-between align-items-center m-2">
+        <h2 class="mb-0">Tipos de Documento</h2>
+        <div>
+            <a href="{{ route('admin.settings.index') }}" class="btn btn-sm btn-secondary">Atras</a>
+            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createDocumentTypeModal">Crear</button>
+            <a href="{{ route('admin.settings.document_types.index') }}" class="btn btn-sm btn-primary">Todo</a>
+            <button class="btn btn-sm btn-primary" onclick="filter()">Filtro</button>
         </div>
     </div>
     <form class="row m-2 bg-light filter collapse">
